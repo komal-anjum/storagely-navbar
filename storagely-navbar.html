@@ -13,8 +13,8 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: open sans, sans-serif;
+body, button {
+  font-family: open sans, sans-serif !important;
 }
 
 .storagely-navbar {
@@ -134,11 +134,15 @@ body {
   padding: 4px 16px;
   display: block;
   font-size: 14px;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
+}
+.storagely-dropdown-link:hover {
+background-color: rgb(107 107 107 / 10%) !important;
+
 }
 
 .storagely-dropdown-menu .storagely-dropdown-menu {
-  top: 0;
+  top: -11px;
   left: 100%;
   display: none;
 }
@@ -317,10 +321,14 @@ body {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
+
   $('#storagely-navbar-menu-icon').click(function() {
       $(this).toggleClass('open');
       $('#storagely-navbar-menu').toggleClass('open');
   });
+
+   
+
 });
 
     </script>
