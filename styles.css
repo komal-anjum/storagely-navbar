@@ -195,7 +195,7 @@ width: 150px;
   .navbar-link,
   .navbar-btn {
       padding: 1rem;
-      width: 100px;
+      width: 100%;
       text-align: center;
       display: block;
       margin-left: 0;
