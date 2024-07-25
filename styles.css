@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, button {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  background-color: #fff;
+  color: #6b6b6b !important;
+  padding: 1rem;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar-logo {
+  font-size: 16px;
+  font-weight: bold;
+}
+.navbar-logo-img{
+width: 150px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.navbar-menu-icon .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #686868 ;
+  margin: 4px 0;
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.navbar-menu-icon.open .bar:nth-child(1) {
+  transform: translateY(14px) rotate(45deg);
+}
+
+.navbar-menu-icon.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-menu-icon.open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  color: #6b6b6b;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  display: block;
+  font-size: 15px;
+}
+
+.navbar-btn {
+  margin-left: 1rem;
+  cursor: pointer;
+  padding: 10px 30px;
+    border-radius: 30px;
+    border: 1px solid #c52127;
+    background: #c52127;
+    color: #fff !important;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar-btn:hover {
+  background-color: #777;
+  border: 1px solid #777;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  display: none;
+  list-style: none;
+  padding: 0.5rem 0;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
+  border: 1px solid #e9e9e9;
+}
+
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-link {
+  color: #6b6b6b;
+  text-decoration: none;
+  padding: 4px 16px;
+  display: block;
+  width: 200px;
+  font-size: 15px;
+}
+
+.dropdown-menu .dropdown-menu {
+  top: -9px;
+  left: 100%;
+  display: none;
+}
+
+.desktop-arrow {
+  display: none;
+  font-size: 10px;
+  position: relative;
+    top: -1px;
+}
+
+.mobile-arrow, .mobile-plus-minus {
+  display: none;
+}
+
+@media screen and (min-width: 1160px) {
+  .navbar-item:hover > .dropdown-menu {
+      display: block;
+  }
+
+  .dropdown-item:hover > .dropdown-menu {
+      display: block;
+  }
+
+  .desktop-arrow {
+      display: inline;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .navbar-container {
+    flex-direction: column;
+    row-gap: 10px;
+}
+.navbar-btn {
+  font-size: 14px;
+}
+.navbar-link {
+  font-size: 14px;
+}
+.dropdown-link {
+  font-size: 14px;
+}
+}
+@media screen and (max-width: 970px) {
+  .navbar-container {
+    flex-direction: row;
+    row-gap: 0px;
+}
+  .navbar-menu {
+      position: absolute;
+      top: 100%;
+      left: -100%;
+      width: 100%;
+      flex-direction: column;
+      background-color: #fff;
+      transition: left 0.3s ease;
+  }
+
+  .navbar-menu-icon {
+      display: flex;
+  }
+
+  .navbar-item {
+      width: 100%;
+  }
+
+  .navbar-link,
+  .navbar-btn {
+      padding: 1rem;
+      width: 160px;
+      text-align: center;
+      display: block;
+      margin-left: 0;
+      margin: auto;
+  }
+  .navbar-btn{
+    margin-top: 20px;
+  }
+
+  .navbar-menu.open {
+      left: 0;
+      top:75px;
+  }
+
+  .dropdown-menu {
+      position: static;
+      display: none;
+      background-color: #fff;
+      padding: 0;
+  }
+
+  .dropdown-item > .dropdown-menu {
+      padding-left: 2rem;
+  }
+
+  .dropdown-link {
+      padding-left: 2rem;
+      padding: 8px 16px;
+  }
+
+  .navbar-item.open > .dropdown-menu,
+  .dropdown-item.open > .dropdown-menu {
+      display: block;
+      max-width: 250px;
+      margin: auto;
+  }
+
+  .mobile-arrow {
+      display: inline;
+      float: right;
+      position: relative;
+        top: 5px;
+  }
+
+  .mobile-plus-minus {
+      display: inline;
+      float: right;
+      margin-left: 10px;
+  }
+}
