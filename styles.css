@@ -195,14 +195,16 @@ width: 150px;
   .navbar-link,
   .navbar-btn {
       padding: 1rem;
-      width: 160px;
+      width: 100px;
       text-align: center;
       display: block;
       margin-left: 0;
-      margin: auto;
+      display: flex;
+      justify-content: space-between;
   }
   .navbar-btn{
     margin-top: 20px;
+    border-radius: 0px;
   }
 
   .navbar-menu.open {
@@ -224,13 +226,15 @@ width: 150px;
   .dropdown-link {
       padding-left: 2rem;
       padding: 8px 16px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
   }
 
   .navbar-item.open > .dropdown-menu,
   .dropdown-item.open > .dropdown-menu {
       display: block;
-      max-width: 250px;
-      margin: auto;
+      max-width: 100%;
   }
 
   .mobile-arrow {
