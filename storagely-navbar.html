@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Multi-Level Navbar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="navbar-main-div">
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo"><a href="#"><img class="navbar-logo-img" src="https://app.storagely.io/public/uploads/logo1291699888124.webp" alt="Logo"></a></div>
@@ -17,7 +20,7 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-            <ul class="navbar-menu" id="navbar-menu">
+            <ul class="navbar-menu desktop-menu">
                 <li class="navbar-item dropdown">
                     <a href="#" class="navbar-link">Find Storage <i class="fas fa-chevron-down desktop-arrow"></i><i class="fas fa-chevron-right mobile-arrow"></i></a>
                     <ul class="dropdown-menu">
@@ -156,8 +159,153 @@
                     <button class="navbar-btn">Find Storage</button>
                 </li>
             </ul>
+
+            <ul class="navbar-menu mobile-menu" id="navbar-menu">
+                <li class="navbar-item dropdown">
+                    <a href="#" class="navbar-link" data-target="dropdown1-content">Find Storage <i class="fas fa-chevron-right mobile-arrow"></i></a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a href="#" class="navbar-link" data-target="dropdown2-content">Our Brands <i class="fas fa-chevron-right mobile-arrow"></i></a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a href="#" class="navbar-link" data-target="dropdown3-content">Resources <i class="fas fa-chevron-right mobile-arrow"></i></a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a href="#" class="navbar-link" data-target="dropdown4-content">About <i class="fas fa-chevron-right mobile-arrow"></i></a>
+                </li>
+                <li class="navbar-item dropdown">
+                    <a href="#" class="navbar-link" data-target="dropdown5-content">My Account <i class="fas fa-chevron-right mobile-arrow"></i></a>
+                </li>
+                <li class="navbar-item nav-btn">
+                    <button class="navbar-btn">Find Storage</button>
+                </li>
+            </ul>
         </div>
     </nav>
+
+
+
+
+    <div class="mobile-navbar-container">
+        <!-- Mobile content will be loaded here dynamically -->
+    </div>
+
+    <!-- Hidden dropdown contents -->
+    <div id="dropdown1-content" class="dropdown-content">
+        <ul class="dropdown-container">
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Arkansas <i class="fas fa-plus mobile-plus-minus"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a href="#" class="dropdown-link">Hot Springs <i class="fas fa-plus mobile-plus-minus"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Central Avenue</a>
+                               
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Colorado <i class="fas fa-plus mobile-plus-minus"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a href="#" class="dropdown-link">Grand Junction <i class="fas fa-plus mobile-plus-minus"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Gunnison Avenue</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="#" class="dropdown-link">Riverside Parkway</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Georgia</a>
+            </li>
+        </ul>
+    </div>
+    <div id="dropdown2-content" class="dropdown-content">
+        <ul class="dropdown-container">
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">10 Federal Storage</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Central Avenue Self Storage</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Lakeside Storage</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Storage Depot</a>
+            </li>
+        </ul>
+      
+    </div>
+    <div id="dropdown3-content" class="dropdown-content">
+        <ul class="dropdown-container">
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Storage Types</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Self Storage FAQs</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Storage Tips</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Moving Tips</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Blog</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Contact</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Pay Online</a>
+            </li>
+        </ul>
+    </div>
+    <div id="dropdown4-content" class="dropdown-content">
+        <ul class="dropdown-container">
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">About Us</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Management Services</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Corporate Sustainability</a>
+            </li>
+        </ul>
+    </div>
+    <div id="dropdown5-content" class="dropdown-content">
+        <ul class="dropdown-container">
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Self Service Portal</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Payments</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Gate/Lock Code</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Move Out</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#" class="dropdown-link">Documents & Information Changes</a>
+            </li>
+          
+        </ul>
+      
+    </div>
+</div>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
