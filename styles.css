@@ -266,6 +266,7 @@ width: 150px;
         width: 100%;
        
   }
+  
   .dropdown-menu .activeline{
     border-bottom: 1px solid hsl(203deg 100% 31% / 10%);
     margin-bottom: 26px;
