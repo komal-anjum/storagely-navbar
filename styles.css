@@ -45,7 +45,7 @@ width: 150px;
 }
 
 .navbar-menu-icon .bar {
-  height: 3px;
+  height: 1px;
   width: 25px;
   background-color: #686868 ;
   margin: 4px 0;
@@ -53,7 +53,7 @@ width: 150px;
 }
 
 .navbar-menu-icon.open .bar:nth-child(1) {
-  transform: translateY(14px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
 }
 
 .navbar-menu-icon.open .bar:nth-child(2) {
@@ -61,7 +61,7 @@ width: 150px;
 }
 
 .navbar-menu-icon.open .bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 .navbar-item {
@@ -217,6 +217,7 @@ width: 150px;
   .navbar-btn{
     margin-top: 20px;
     border-radius: 0px;
+    font-weight: 800;
   }
 
   .navbar-menu.open {
@@ -266,7 +267,7 @@ width: 150px;
         width: 100%;
        
   }
-  
+
   .dropdown-menu .activeline{
     border-bottom: 1px solid hsl(203deg 100% 31% / 10%);
     margin-bottom: 26px;
