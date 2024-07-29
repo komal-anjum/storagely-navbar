@@ -49,6 +49,7 @@ $(document).ready(function() {
         // Unbind any existing handlers to prevent duplicate handling
         $('.mobile-navbar-container .dropdown-link').off('click');
 
+      
         // Handle click event on dropdown links in the mobile-navbar-container
         $('.mobile-navbar-container .dropdown-link').on('click', function(e) {
             e.preventDefault(); // Prevent the default action
@@ -61,17 +62,24 @@ $(document).ready(function() {
             if ($subMenu.is(':visible')) {
                 $subMenu.slideUp();
                 $icon.removeClass('fa-minus').addClass('fa-plus');
+                $this.addClass('activeline');
             } else {
                 $subMenu.slideDown();
                 $icon.removeClass('fa-plus').addClass('fa-minus');
+                $this.removeClass('activeline');
             }
 
             // Close other open submenus and reset their icons
             $subMenu.parent().siblings().find('.dropdown-menu').slideUp();
             $subMenu.parent().siblings().find('.mobile-plus-minus').removeClass('fa-minus').addClass('fa-plus');
+            $subMenu.parent().siblings().find('.dropdown-link').addClass('activeline');
         });
     }
 
     // Initial attachment of handlers
     attachDropdownHandlers();
 });
+
+
+
+
