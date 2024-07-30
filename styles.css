@@ -10,7 +10,7 @@ body, button {
 }
 
 .navbar {
-  background-color: blue;
+  background-color: green;
   color: #6b6b6b !important;
   padding: 1rem;
 }
@@ -223,7 +223,7 @@ width: 150px;
   .navbar-menu.open {
     display: flex;
       left: 0;
-      top:86px;
+      top:88px;
       position: absolute;
       width: 100%;
       flex-direction: column;
