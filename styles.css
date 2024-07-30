@@ -10,7 +10,7 @@ body, button {
 }
 
 .navbar {
-  background-color: red;
+  background-color: #fff;
   color: #6b6b6b !important;
   padding: 1rem;
 }
@@ -309,14 +309,11 @@ width: 150px;
     display: block !important;
   }
   .dropdown-item {
-    /* border-bottom: 1px solid hsl(203deg 100% 31% / 10%); */
-
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid hsl(203deg 100% 31% / 10%);
     
 }
 .navbar-item {
-  /* border-bottom: 1px solid hsl(203deg 100% 31% / 10%); */
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid hsl(203deg 100% 31% / 10%);
   
 }
 .dropdown-container{
