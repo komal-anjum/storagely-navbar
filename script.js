@@ -32,24 +32,29 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
-    // Show dropdown content in mobile-navbar-container
-    $('.navbar-link').click(function(e) {
-        e.preventDefault(); // Prevent the default action
 
-        var targetId = $(this).data('target');
+$(document).ready(function() {
+    // Function to handle showing dropdown content
+    function showDropdownContent(targetId) {
         var content = $('#' + targetId).html();
-        $('.mobile-navbar-container').html(content).slideDown();
+        $('.mobile-navbar-container').html(content).show(); // Directly show without animation
 
         // Re-attach event handler for newly added dropdown links
         attachDropdownHandlers();
+    }
+
+    // Show dropdown content in mobile-navbar-container on navbar-link click
+    $('.navbar-link').click(function(e) {
+        e.preventDefault(); // Prevent the default action
+        var targetId = $(this).data('target');
+        showDropdownContent(targetId);
     });
 
+    // Attach event handlers for dropdown links
     function attachDropdownHandlers() {
         // Unbind any existing handlers to prevent duplicate handling
         $('.mobile-navbar-container .dropdown-link').off('click');
 
-      
         // Handle click event on dropdown links in the mobile-navbar-container
         $('.mobile-navbar-container .dropdown-link').on('click', function(e) {
             e.preventDefault(); // Prevent the default action
@@ -62,24 +67,17 @@ $(document).ready(function() {
             if ($subMenu.is(':visible')) {
                 $subMenu.slideUp();
                 $icon.removeClass('fa-minus').addClass('fa-plus');
-                $this.addClass('activeline');
             } else {
                 $subMenu.slideDown();
                 $icon.removeClass('fa-plus').addClass('fa-minus');
-                $this.removeClass('activeline');
             }
 
             // Close other open submenus and reset their icons
-            $subMenu.parent().siblings().find('.dropdown-menu').slideUp();
-            $subMenu.parent().siblings().find('.mobile-plus-minus').removeClass('fa-minus').addClass('fa-plus');
-            $subMenu.parent().siblings().find('.dropdown-link').addClass('activeline');
+            $this.closest('.dropdown-item').siblings().find('.dropdown-menu').slideUp();
+            $this.closest('.dropdown-item').siblings().find('.mobile-plus-minus').removeClass('fa-minus').addClass('fa-plus');
         });
     }
 
     // Initial attachment of handlers
     attachDropdownHandlers();
 });
-
-
-
-
