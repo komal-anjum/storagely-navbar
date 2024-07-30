@@ -10,7 +10,7 @@ body, button {
 }
 
 .navbar {
-  background-color: #fff;
+  background-color: #151414;
   color: #6b6b6b !important;
   padding: 1rem;
 }
@@ -223,7 +223,7 @@ width: 150px;
   .navbar-menu.open {
     display: flex;
       left: 0;
-      top:88.2px;
+      top:87px;
       position: absolute;
       width: 100%;
       flex-direction: column;
@@ -309,11 +309,14 @@ width: 150px;
     display: block !important;
   }
   .dropdown-item {
-    border-bottom: 1px solid hsl(203deg 100% 31% / 10%);
+    /* border-bottom: 1px solid hsl(203deg 100% 31% / 10%); */
+
+    border-bottom: 1px solid red;
     
 }
 .navbar-item {
-  border-bottom: 1px solid hsl(203deg 100% 31% / 10%);
+  /* border-bottom: 1px solid hsl(203deg 100% 31% / 10%); */
+  border-bottom: 1px solid red;
   
 }
 .dropdown-container{
