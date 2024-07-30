@@ -223,7 +223,7 @@ width: 150px;
   .navbar-menu.open {
     display: flex;
       left: 0;
-      top:87px;
+      top:88px;
       position: absolute;
       width: 100%;
       flex-direction: column;
@@ -324,6 +324,3 @@ width: 150px;
 }
 
 }
-
-
-
