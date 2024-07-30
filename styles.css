@@ -301,7 +301,7 @@ width: 150px;
     width: 50%;
     position: relative;
     right: -50%;
-    top: 0px;
+    top: -1px;
     height: calc(100vh - 86px);
     display: none;
   }
