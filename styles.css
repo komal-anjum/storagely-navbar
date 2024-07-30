@@ -206,7 +206,7 @@ width: 150px;
 
   .navbar-link,
   .navbar-btn {
-      padding: 19px 15px;
+      padding: 18px 15px;
       width: 100%;
       text-align: center;
       display: block;
@@ -223,7 +223,7 @@ width: 150px;
   .navbar-menu.open {
     display: flex;
       left: 0;
-      top:90px;
+      top:88.2px;
       position: absolute;
       width: 100%;
       flex-direction: column;
@@ -301,7 +301,7 @@ width: 150px;
     width: 50%;
     position: relative;
     right: -50%;
-    top: -1px;
+    top: 0px;
     height: calc(100vh - 86px);
     display: none;
   }
